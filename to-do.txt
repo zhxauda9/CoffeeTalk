@@ -1,0 +1,39 @@
+Mandatory part
+- Add photo field for menu items
+- Create ERD diagram
+- Change default data {Initial setup/Mock data}
+- Update indexes
+- Fix problem with unit types
+- Fix POST /menu
+- Fix DELETE /menu
+- Fix PUT /inventory
+- Fix DELETE /inventory
+- Add batch-process for orders
+- Fix PUT /orders
+- Fix DELETE /orders
+- Add payment, price history table ( with methods_)
+- Add enum data ( staff roles, payment methods, item sizes )
+- Update tables (add updated_at, add allergen )
+- Output aggregation data in json format 
+- Add q, period in query
+- Add log.log file
+
+Additional part
+- Add search, filter, minPrice, maxPrice, startDate, endDate, month, year
+- Add pagnation, sorting, pageSize, currentPage, hasNextPage, totalPages {1-5}
+- Add frontend ( just copy Staymate )
+    - home page (design)
+    - catalog (design)
+    - payment window
+    - Admin panel
+- Update README.md
+
+
+Meruyert's Part:
+- post batch process
+
+
+Aida's Part:
+- add connection for pages 
+- add html files
+- Update README.md
