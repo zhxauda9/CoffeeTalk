@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Catalog</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .menu-card {
-            max-width: 300px;
-            margin: 10px;
-        }
-        .menu-card img {
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Catalog</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles/menuCatalog.css">
 </head>
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center">Menu Catalog</h1>
-        <div id="menu" class="d-flex flex-wrap justify-content-center"></div>
+
+<header class="text-dark py-3 shadow-lg fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="logo font-weight-bold h4 mb-0">Coffee Heaven</div>
+    <div class="d-flex align-items-center">
+      <a href="#" aria-label="Facebook">
+        <img class="ml-2" src="/static/pictures/icons/facebook.png" width="20" height="20" alt="Facebook">
+      </a>
+      <a href="#" aria-label="Instagram">
+        <img class="ml-2" src="/static/pictures/icons/instagram.png" width="20" height="20" alt="Instagram">
+      </a>
+      <a href="https://platform.alem.school/git/mboranba/frappuccino" aria-label="GitHub">
+        <img class="ml-2" src="/static/pictures/icons/github.png" width="20" height="20" alt="GitHub">
+    </a>
+      <a href="/" class="btn font-weight-bold ml-3 p-2 px-3 text-dark">Home</a>
+      <a href="/menuCatalog" class="btn font-weight-bold ml-3 p-2 px-3 text-dark">Menu</a>
+      <a href="/admin" class="btn font-weight-bold ml-3 p-2 px-3 text-dark">Admin</a>
+      <a href="#contact-email" class="btn font-weight-normal ml-3 p-2 px-3 text-dark">Contact Us</a>
     </div>
-    
-    <script>
-        async function fetchMenu() {
-            try {
-                const response = await fetch('http://localhost:8080/menu');
-                const menuItems = await response.json();
-                
-                const menuContainer = document.getElementById('menu');
-                menuContainer.innerHTML = '';
-                
-                menuItems.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = 'card menu-card';
-                    card.innerHTML = `
-                        <img src="${item.image}" class="card-img-top" alt="${item.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${item.name}</h5>
-                            <p class="card-text">${item.description}</p>
-                            <p class="card-text"><strong>Price:</strong> $${item.price.toFixed(2)}</p>
-                        </div>
-                    `;
-                    menuContainer.appendChild(card);
-                });
-            } catch (error) {
-                console.error('Error fetching menu:', error);
-            }
-        }
-        
-        fetchMenu();
-    </script>
+  </div>
+</header>
+
+<div class="container mt-5 pt-5">
+  <h1 class="text-center">Menu Catalog</h1>
+  <div id="menu" class="d-flex flex-wrap justify-content-center"></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div>
+      <h3>About Us</h3>
+      <p>We are dedicated to serving high-quality coffee with an unforgettable experience.</p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#menu-preview">Menu</a></li>
+        <li><a href="#contact-email">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top: 30px; font-size: 0.9rem; color: #aaa;">
+    &copy; 2025 Coffee Heaven. All rights reserved.
+  </div>
+</footer>
+
+<script src="/static/scripts/menuCalalog.js"></script>
+
 </body>
 </html>

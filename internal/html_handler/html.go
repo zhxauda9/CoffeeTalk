@@ -24,3 +24,7 @@ func ServeInventory(w http.ResponseWriter, r *http.Request) {
 func ServeOrder(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, filepath.Join("web", "order.html"))
 }
+
+func ServeMenuCatalog(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, filepath.Join("web", "menuCatalog.html"))
+}

@@ -13,6 +13,7 @@ type PopularItem struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
 	Quantity    int    `json:"quantity"`
+	Image       string `json:"image"`
 }
 
 type SearchResult struct {

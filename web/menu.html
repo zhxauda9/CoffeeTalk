@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles/menu.css">
 </head>
 <body>
-<h1>Menu</h1>
+<div class="container my-5">
+    <header class="text-center" style="color: white">
+        <h1 class="display-4">Frappucino: Menu Management</h1>
+        <p class="lead">Manage menu with ease</p>
+    </header>
+
+    <section id="create-menu" class="form-section my-4 p-3 rounded">
+        <h2>Create Menu Item</h2>
+        <form id="create-menu-form">
+            <div class="form-group">
+                <label for="menu-name">Name: </label>
+                <input type="string" id="menu-name" class="form-control" placeholder="Enter Menu Item Name" required>
+            </div>
+            <div class="form-group">
+                <label for="menu-desc">Description: </label>
+                <input type="text" id="menu-desc" class="form-control" placeholder="Enter Menu Item Description" required>
+            </div>
+            <div class="form-group">
+                <label for="menu-price">Price:</label>
+                <input type="number" id="menu-price" step="0.01" class="form-control" placeholder="Enter Menu Item Price" required>
+            </div>
+            <div class="form-group">
+                <label for="menu-ings">Ingredients:</label>
+                <textarea id="menu-ings" class="form-control" placeholder="Enter ingredients as JSON"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="menu-image">Image:</label>
+                <input type="file" id="menu-image" class="form-control" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">Create Menu Item</button>
+        </form>
+    </section>
+
+    <section id="menu" class="my-4 p-4 rounded">
+        <h2>Menu</h2>
+        <table class="table table-hover text-center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Ingredients</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="menu-table">
+            </tbody>
+        </table>
+    </section>
+    <script src="/static/scripts/menu.js">
+    </script>
+</div>
 </body>
 </html>

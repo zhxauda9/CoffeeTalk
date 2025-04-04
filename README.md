@@ -1,20 +1,31 @@
 # ☕ **Frappuchino - The Ultimate Coffee Shop Management System** 💖
 
-Ever wondered how your favorite coffee shop juggles a rush of orders, makes sure they always have your favorite blend ready, and remembers that you love your coffee with an extra shot of espresso? Well, behind the scenes, they use smart management systems to make everything run smoothly. ☕💻
+Ever wondered how your favorite coffee shop juggles a rush of orders, ensures they always have your favorite blend ready, and remembers your special coffee preferences? Behind the scenes, they rely on smart management systems to keep everything running smoothly. ☕💻
 
-This project, **Frappuchino**, is a simplified version of those systems, and it gives you a chance to get hands-on with the magic behind the coffee counter. It’s designed to handle all the essential things a coffee shop needs to keep running smoothly. So, let’s make the coffee shop world even better with some cool tech! 💡
+Introducing **Frappuchino** — a simplified version of these systems! It’s your chance to dive into the technology behind the coffee counter. With **Frappuchino**, you’ll be able to handle orders, manage inventory, and keep the menu up to date, just like a real coffee shop manager. Let’s make the coffee shop world even better with some cool tech! 💡
 
 ---
 
 ## ✨ Key Features of Frappuchino:
 
-- **Manage Orders:** Create, update, close, and even delete customer orders with ease. You’ve got this! 👨‍🍳✨
+- **Manage Orders:** Create, update, close, and delete customer orders with ease. You’ve got this! 👨‍🍳✨
 - **Oversee Inventory:** Keep track of stock levels to prevent shortages and ensure every cup is fresh and perfect. 📦
 - **Update the Menu:** Add new drinks, update prices, or add delicious new pastries to your offerings. 🍰☕
   
-So, whether you’re brewing up a batch of lattes or tracking down that last packet of sugar, Hot Coffee helps you handle it all in style! 🎉
+So, whether you’re brewing up a batch of lattes or tracking down that last packet of sugar, **Frappuchino** helps you handle it all in style! 🎉
 
 ---
+
+## 📸 **Visuals**
+
+- **Home Page:**  
+![Home Page](assets/home_page.png)
+
+- **Popular Items:**  
+![Popular Items](assets/popular_items.png)
+
+- **Menu Catalog:**  
+![Menu Catalog](assets/menu_catalog.png)
 
 ## 🌟 API Endpoints
 
@@ -38,9 +49,10 @@ So, whether you’re brewing up a batch of lattes or tracking down that last pac
 | POST   | `/menu`             | Adds a new menu item.              | 🍰 201 Created               |
 | GET    | `/menu`             | Retrieves all menu items.          | 📜 200 OK                    |
 | GET    | `/menu/{id}`        | Retrieves a specific menu item.    | 🍽️ 200 OK                    |
+| GET    | `/menu/{id}/image`  | Retrieves a menu item's image.     | 🍽️ 200 OK                    |
 | PUT    | `/menu/{id}`        | Updates an existing menu item.     | ✨ 200 OK                    |
+| PUT    | `/menu/{id}/image`  | Updates an existing menu item's image.| ✨ 200 OK                    |
 | DELETE | `/menu/{id}`        | Deletes a menu item.               | 💥 204 No Content           |
-
 ---
 
 ### **Inventory**
@@ -130,46 +142,26 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "total_sales": 1500.50
+  "total_sales": 29
 }
 ```
 
 ---
 
-## 🚨 Error Examples:
+## 🚀 How to Run
 
-### **Invalid Product ID in Order Items:**
-```http
-HTTP/1.1 400 Bad Request
-Content-Type: application/json
+To get **Frappuchino** up and running locally with Docker, follow these steps:
 
-{
-  "error": "Invalid product ID in order items."
-}
+1. Make sure you have **Docker** installed on your machine.
+2. Clone the repository to your local machine.
+3. Open a terminal and navigate to the project folder.
+4. Run the following command to build and start the application:
+
+```bash
+docker-compose up --build
 ```
 
-### **Insufficient Inventory:**
-```http
-HTTP/1.1 400 Bad Request
-Content-Type: application/json
-
-{
-  "error": "Insufficient inventory for ingredient 'Milk'. Required: 200ml, Available: 150ml."
-}
-```
-
----
-
-## 📂 **Database Files** (Stored in the given directory — `--dir` flag)
-
-1. **`orders.json`**  
-   Contains information about all the orders placed in the coffee shop.
-
-2. **`menu_items.json`**  
-   Lists all the menu items, their descriptions, prices, and ingredients.
-
-3. **`inventory.json`**  
-   Tracks ingredients and their quantities, making sure the coffee shop is always stocked!
+This will set up all the necessary containers and get the app running on your local machine.
 
 ---
 
@@ -178,5 +170,5 @@ Content-Type: application/json
 This project has been brought to you with love by:
 - **mboranba** 💻
 - **azhalgas** 🌟
----
 
+---

@@ -1,122 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coffee Shop</title>
-<link rel="icon" type="image/x-icon" href="/web/pictures/icons/favicon.ico">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/static/styles/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="icon" type="image/x-icon" href="/web/pictures/icons/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/home.css">
 </head>
-
 <body>
-<header class="text-dark py-3 shadow-lg fixed-top" style="background: rgb(249, 248, 248);">
-<div class="container d-flex justify-content-between align-items-center" >
-<div class="logo font-weight-bold h4 mb-0">Coffee Heaven</div>
-<div class="d-flex align-items-center">
-<a href="#" aria-label="Facebook">
-<img class="ml-2" src="/static/pictures/icons/facebook.png" width="20"
-height="20" alt="Facebook">
-</a>
-<a href="#" aria-label="Instagram">
-<img class="ml-2" src="/static/pictures/icons/instagram.png" width="20" height="20"
-     alt="Instagram">
-</a>
-<!-- change link to github -->
-<a href="#" aria-label="GitHub">
-<img class="ml-2" src="/static/pictures/icons/github.png" width="20" height="20" alt="Github">
-</a>
-<a href="/admin" class="btn font-weight-bold ml-3 p-2 px-3 text-dark">Admin</a>
-<a href="#contact-email" class="btn font-weight-normal ml-3 p-2 px-3 text-dark">Contact Us</a>
-</div>
-</div>
+
+<header class="text-dark py-3 shadow-lg fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo font-weight-bold h4 mb-0">Coffee Heaven</div>
+        <div class="d-flex align-items-center">
+            <a href="#" aria-label="Facebook">
+                <img class="ml-2" src="/static/pictures/icons/facebook.png" width="20" height="20" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img class="ml-2" src="/static/pictures/icons/instagram.png" width="20" height="20" alt="Instagram">
+            </a>
+            <a href="https://platform.alem.school/git/mboranba/frappuccino" aria-label="GitHub">
+                <img class="ml-2" src="/static/pictures/icons/github.png" width="20" height="20" alt="GitHub">
+            </a>
+            <a href="/" class="btn font-weight-bold ml-3 p-2 px-3 text-dark">Home</a>
+            <a href="/menuCatalog" class="btn font-weight-bold ml-3 p-2 px-3 text-dark">Menu</a>
+            <a href="/admin" class="btn font-weight-bold ml-3 p-2 px-3 text-dark">Admin</a>
+            <a href="#contact-email" class="btn font-weight-normal ml-3 p-2 px-3 text-dark">Contact Us</a>
+        </div>
+    </div>
 </header>
 
-<div class="d-flex flex-column justify-content-center align-items-center text-center text-white"
-style="background-image: url('static/pictures/background/home_background.jpg'); background-size: cover; height: 700px; position: relative;">
-<h1 class="display-4 font-weight-bold text-shadow " style="color: black;">Welcome to Coffee Heaven</h1>
-<p class="lead" style="color: black;">Your favorite spot for freshly brewed coffee and delightful treats.</p>
-<a href="#" class="btn btn-lg btn-dark mt-3">View Our Menu</a>
+<div class="hero">
+    <h1 style="color: white;">Welcome to Coffee Heaven</h1>
+    <p style="color: white;">Your favorite spot for freshly brewed coffee and delightful treats.</p>
+    <a href="#menu-preview" class="btn">Explore Our Menu</a>
 </div>
 
-<section id="about-us" style="padding: 50px; background-color: #fbe7cc;">
-<div style="text-align: center; max-width: 800px; margin: 0 auto;">
-<h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">About Us</h2>
-<p style="font-size: 1.2rem; line-height: 1.8;">
-                At Coffee Haven, we believe that great coffee brings people together. We source the finest beans and craft our drinks with love and passion.
-</p>
-</div>
+<section id="about-us">
+    <h2 class="font-weight-bold mb-4" style="font-size: 2.5rem;">About Us</h2>
+    <p class="lead" style="font-size: 1.2rem; line-height: 1.8;">
+        At Coffee Heaven, we believe that great coffee brings people together. We source the finest beans and craft our drinks with love and passion.
+    </p>
 </section>
 
-<section id="menu-preview" style="padding: 50px; background-color: #fff;">
-<h2 class="text-center font-weight-bold mb-4" style="font-size: 2rem;">Our Popular Brews</h2>
-<div class="d-flex flex-wrap justify-content-center" id="menu-items" style="gap: 20px;">
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="/static/pictures/menu/latte.jpg" alt="Latte">
-<div class="card-body">
-<h5 class="card-title">Latte</h5>
-<p class="card-text">Smooth espresso with steamed milk.</p>
-</div>
-</div>
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="/static/pictures/menu/espresso.jpg" alt="Espresso">
-<div class="card-body">
-<h5 class="card-title">Espresso</h5>
-<p class="card-text">Rich and bold single shot of espresso.</p>
-</div>
-</div>
-<div class="card" style="width: 18rem;">
-<img class="card-img-top" src="/static/pictures/menu/cappuccino.jpg" alt="Cappuccino">
-<div class="card-body">
-<h5 class="card-title">Cappuccino</h5>
-<p class="card-text">Perfect balance of espresso, steamed milk, and foam.</p>
-</div>
-</div>
-</div>
+<section id="menu-preview">
+    <h2 class="font-weight-bold mb-4" style="font-size: 2.5rem;">Our Popular Items</h2>
+    <div id="popularItemsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="menu-carousel-inner"></div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#popularItemsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#popularItemsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </section>
+
+
+<section id="contact-email" class="form-section">
+    <div>
+        <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">Contact Us</h2>
+        <p style="font-size: 1.2rem; line-height: 1.8;">
+            Have questions or want to order ahead? Reach out to us!
+        </p>
+        <form id="contact-email-form">
+            <div class="form-group">
+                <input type="email" id="user-email" name="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+            <button type="submit" class="btn" style="background-color: rgb(190, 161, 131)">Submit</button>
+        </form>
+    </div>
 </section>
 
-<section id="contact-email" class="form-section" style="padding: 50px; background-color: #fbe7cc;">
-<div style="text-align: center; max-width: 800px; margin: 0 auto;">
-<h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px;">Contact Us</h2>
-<p style="font-size: 1.2rem; line-height: 1.8;">
-                    Have questions or want to order ahead? Reach out to us!
-</p>
-<form id="contact-email-form">
-<div class="form-group">
-<input type="email" id="user-email" name="email" class="form-control"
-placeholder="Enter your email address" required>
-</div>
-<button type="submit" class="btn" style="background-color: rgb(190, 161, 131)">Submit</button>
-</form>
-</div>
-</section>
-
-<footer style="background-color: #333; color: #fff; padding: 40px 20px; text-align: center;">
-<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
-
-<div style="flex: 1 1 300px; margin: 10px;">
-<h3 style="font-size: 1.5rem; margin-bottom: 15px; font-weight: bold;">About Us</h3>
-<p style="font-size: 0.9rem; line-height: 1.6;">
-                    We are dedicated to serving high-quality coffee with an unforgettable experience.
-</p>
-</div>
-
-<div style="flex: 1 1 200px; margin: 10px;">
-<h3 style="font-size: 1.5rem; margin-bottom: 15px; font-weight: bold;">Quick Links</h3>
-<ul style="list-style: none; padding: 0;">
-<li><a href="#about-us" style="color: #fff; text-decoration: none;">About Us</a></li>
-<li><a href="#menu-preview" style="color: #fff; text-decoration: none;">Menu</a></li>
-<li><a href="#contact-email" style="color: #fff; text-decoration: none;">Contact Us</a></li>
-</ul>
-</div>
-</div>
-
-<div style="margin-top: 30px; font-size: 0.9rem; color: #aaa;">
-&copy; 2025 Coffee Heaven. All rights reserved.
-</div>
+<footer>
+    <div class="container">
+        <div>
+            <h3>About Us</h3>
+            <p>We are dedicated to serving high-quality coffee with an unforgettable experience.</p>
+        </div>
+        <div>
+            <h3>Quick Links</h3>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#menu-preview">Menu</a></li>
+                <li><a href="#contact-email">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="margin-top: 30px; font-size: 0.9rem; color: #aaa;">
+        &copy; 2025 Coffee Heaven. All rights reserved.
+    </div>
 </footer>
-<script src="static/scripts/home.js"></script>
-</body>
 
+<script src="/static/scripts/home.js"></script>
+</body>
 </html>

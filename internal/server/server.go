@@ -15,12 +15,17 @@ func ServerLaunch(db *sql.DB, logger *slog.Logger) {
 	mux := http.NewServeMux()
 
 	fs := http.FileServer(http.Dir("./web"))
+	fs2 := http.FileServer(http.Dir("./uploads"))
+
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
+	mux.Handle("/pictures", http.StripPrefix("/pictures", fs))
+	mux.Handle("/uploads/", http.StripPrefix("/uploads/", fs2))
 	mux.HandleFunc("/", html_handler.ServeHome)
 	mux.HandleFunc("/admin", html_handler.ServeAdmin)
 	mux.HandleFunc("/admin/menu", html_handler.ServeMenu)
 	mux.HandleFunc("/admin/inventory", html_handler.ServeInventory)
 	mux.HandleFunc("/admin/order", html_handler.ServeOrder)
+	mux.HandleFunc("/menuCatalog", html_handler.ServeMenuCatalog)
 
 	// - - - - - - - - - - - - - - INVENTORY - - - - - - - - - - - - - -
 	inventoryRepo := dal.NewInventoryRepository(db)

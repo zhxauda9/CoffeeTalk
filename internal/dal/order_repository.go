@@ -285,7 +285,7 @@ func (repo *OrderRepository) DeleteOrder(OrderID int) error {
 
 	if !orderExists {
 		tx.Rollback()
-		return fmt.Errorf("order with ID %d not found", OrderID)
+		return fmt.Errorf("order not found", OrderID)
 	}
 
 	queryDeleteOrderItems := `

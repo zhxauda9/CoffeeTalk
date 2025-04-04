@@ -1,9 +1,10 @@
 package main
 
 import (
-	_ "github.com/lib/pq"
 	"hot-coffee/internal/server"
 	"hot-coffee/internal/setup"
+
+	_ "github.com/lib/pq"
 )
 
 func main() {

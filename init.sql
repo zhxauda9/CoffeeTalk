@@ -190,17 +190,21 @@ EXECUTE FUNCTION log_inventory_transaction();
 
 -- Mock data for menu_items
 INSERT INTO menu_items (Name, Description, Price,Image) VALUES
-('Caffe Latte', 'Espresso with steamed milk', 3.50,'uploads/default.jpg'),
-('Blueberry Muffin', 'Freshly baked muffin with blueberries', 2.00,'uploads/default.jpg'),
-('Espresso', 'Strong and bold coffee', 2.50,'uploads/default.jpg'),
-('Cappuccino', 'Espresso with steamed milk and foam', 3.00,'uploads/default.jpg'),
-('Mocha', 'Espresso with steamed milk and chocolate', 3.75,'uploads/default.jpg'),
-('Iced Latte', 'Iced espresso with milk', 3.80,'uploads/default.jpg'),
-('Americano', 'Espresso diluted with hot water', 2.80,'uploads/default.jpg'),
-('Carrot Cake', 'Delicious spiced cake with cream cheese frosting', 2.50,'uploads/default.jpg'),
-('Vanilla Latte', 'Espresso with steamed milk and vanilla syrup', 3.60,'uploads/default.jpg'),
-('Chocolate Croissant', 'Flaky croissant with chocolate filling', 2.80,'uploads/default.jpg');
-
+('Caffe Latte', 'Espresso with steamed milk', 3.50,'uploads/latte.jpg'),
+('Blueberry Muffin', 'Freshly baked muffin with blueberries', 2.00,'uploads/muffin.jpg'),
+('Espresso', 'Strong and bold coffee', 2.50,'uploads/espresso.jpg'),
+('Cappuccino', 'Cappucino with steamed milk and foam', 3.00,'uploads/cappucino.jpg'),
+('Mocha', 'Espresso with steamed milk and chocolate', 3.75,'uploads/mocha.jpg'),
+('Iced Latte', 'Iced espresso with milk', 3.80,'uploads/icedlatte.jpg'),
+('Americano', 'Espresso diluted with hot water', 2.80,'uploads/americano.jpg'),
+('Carrot Cake', 'Delicious spiced cake with cream cheese frosting', 2.50,'uploads/carrot.jpg'),
+('Vanilla Latte', 'Espresso with steamed milk and vanilla syrup', 3.60,'uploads/vanillalatte.jpg'),
+('Chocolate Croissant', 'Flaky croissant with chocolate filling', 2.80,'uploads/croissant.jpg'),
+('Black Coffee', 'Classic brewed coffee', 2.00, 'uploads/default.jpg'),
+('Cheese Croissant', 'Flaky croissant with melted cheese', 2.90, 'uploads/cheesecroissant.jpg'),
+('Bagel with Cream Cheese', 'Toasted bagel with smooth cream cheese', 3.20, 'uploads/bagel.jpg'),
+('Ham & Cheese Sandwich', 'Classic sandwich with ham and cheese', 4.50, 'uploads/sandwich.jpg'),
+('Oatmeal Cookie', 'Soft and chewy oatmeal cookie', 2.30, 'uploads/oatmealcookie.jpg');
 
 -- Mock data for inventory
 INSERT INTO inventory (Name, Quantity, Unit) VALUES
@@ -213,7 +217,12 @@ INSERT INTO inventory (Name, Quantity, Unit) VALUES
 ('Chocolate', 1500, 'g'),
 ('Coffee Beans', 2000, 'g'),
 ('Cocoa Powder', 1000, 'g'),
-('Vanilla Syrup', 800, 'ml');
+('Vanilla Syrup', 800, 'ml'),
+('Cheese', 2000, 'g'),
+('Bagels', 5000, 'g'),
+('Ham', 3000, 'g'),
+('Oats', 2500, 'g');
+
 
 
 -- Mock data for menu_item_ingredients
@@ -236,7 +245,21 @@ INSERT INTO menu_item_ingredients (MenuID, IngredientID, Quantity) VALUES
 (8, 4, 20),  -- Carrot Cake: 20 g Butter
 (9, 1, 1),  -- Vanilla Latte: 1 Espresso Shot
 (9, 2, 200),  -- Vanilla Latte: 200 ml Milk
-(10, 7, 50);  -- Chocolate Croissant: 50 g Chocolate
+(10, 7, 50),  -- Chocolate Croissant: 50 g Chocolate
+(11, 8, 10),  -- Black Coffee: 10 g Coffee Beans
+(12, 3, 100),  -- Cheese Croissant: 100 g Flour
+(12, 4, 30),  -- Cheese Croissant: 30 g Butter
+(12, 11, 50),  -- Cheese Croissant: 50 g Cheese
+(13, 12, 1),  -- Bagel with Cream Cheese: 1 Bagel
+(13, 11, 40),  -- Bagel with Cream Cheese: 40 g Cheese
+(14, 12, 1),  -- Ham & Cheese Sandwich: 1 Bagel
+(14, 11, 50),  -- Ham & Cheese Sandwich: 50 g Cheese
+(14, 13, 50),  -- Ham & Cheese Sandwich: 50 g Ham
+(15, 14, 50),  -- Oatmeal Cookie: 50 g Oats
+(15, 3, 50),  -- Oatmeal Cookie: 50 g Flour
+(15, 5, 20),  -- Oatmeal Cookie: 20 g Sugar
+(15, 4, 15);  -- Oatmeal Cookie: 15 g Butter
+
 
 
 -- Mock data for orders 

@@ -2,9 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Inventory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles/inventory.css">
 </head>
 <body>
-<p>Inventory</p>
+<div class="container my-5">
+    <header class="text-center" style="color: white">
+        <h1 class="display-4">Frappucino: Inventory Management</h1>
+        <p class="lead">Manage inventory with ease</p>
+    </header>
+
+    <section id="create-inventory" class="form-section my-4 p-3 rounded">
+        <h2>Create Inventory Item</h2>
+        <form id="create-inventory-form">
+            <div class="form-group">
+                <label for="ingredient-name">Name:</label>
+                <input type="string" id="ingredient-name" class="form-control" placeholder="Enter Ingredient Name" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredient-quantity">Quantity:</label>
+                <input type="number" id="ingredient-quantity" step="0.01" class="form-control" placeholder="Enter quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="ingredient-unit">Unit:</label>
+                <input type="text" id="ingredient-unit" class="form-control" placeholder="Enter unit (e.g., kg, L)" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Inventory</button>
+        </form>
+    </section>
+
+    <section id="inventory" class="my-4 p-4 rounded">
+        <h2>Inventory</h2>
+        <table class="table table-hover text-center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="inventory-table">
+            </tbody>
+        </table>
+    </section>
+    <script src="/static/scripts/inventory.js">
+    </script>
+</div>
 </body>
 </html>
